@@ -16,6 +16,7 @@ DATA_FOLDER = 'data'
 DATA_PATH = os.path.join(DATA_FOLDER,'df_reccomender_stock_use.csv')
 df_reccomender = pd.read_csv(DATA_PATH)
 
+
 #Load the model!
 # Configuration
 MODEL_FOLDER = 'models'
@@ -56,6 +57,8 @@ def grouping(df):
         quantity=('quantity', 'sum'),
     ).reset_index()
     return df_daily
+
+product_dictionary = get_products_name()
 
 
 #Make The Reccomender!
